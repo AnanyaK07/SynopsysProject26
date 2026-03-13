@@ -1,0 +1,263 @@
+.profile {
+  background: var(--bg);
+  min-height: calc(100vh - 64px);
+  padding: 28px 18px 48px;
+}
+
+.profile__container {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+}
+
+.profile__headerRow {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile__back {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  font-size: 34px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.profile__titleWrap {
+  text-align: center;
+}
+
+.profile__title {
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 900;
+}
+
+.profile__underline {
+  width: min(520px, 70%);
+  height: 4px;
+  background: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 999px;
+  opacity: 0.85;
+}
+
+.profile__spacer {
+  width: 44px;
+  height: 44px;
+}
+
+.profile__loading,
+.profile__error {
+  margin: 24px 0;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.profile__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.profile__card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.profile__card--center {
+  text-align: center;
+  padding: 22px 22px 26px;
+}
+
+.profile__card--wide {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+}
+
+.profile__cardTitle {
+  margin: 0 0 14px 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.profile__cardTitle--center {
+  margin-bottom: 10px;
+}
+
+.profile__confidenceValue {
+  font-size: 56px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.profile__confidenceHint {
+  margin-top: 6px;
+  opacity: 0.75;
+  font-weight: 500;
+}
+
+.profile__ringRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.profile__ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.profile__ringSvg {
+  width: 220px;
+  height: 220px;
+  transform: rotate(-90deg);
+}
+
+.profile__ringTrack {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.08);
+  stroke-width: 18;
+}
+
+.profile__ringProgress {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 18;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 300ms ease;
+}
+
+.profile__ringCenter {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.profile__label {
+  font-size: 34px;
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.profile__severity {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #b3212b;
+}
+
+.profile__meaning {
+  margin: 10px auto 18px;
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+.profile__list {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.profile__link {
+  margin-top: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.profile__link:hover {
+  opacity: 1;
+}
+
+.profile__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.profile__explainNote {
+  margin-top: 16px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.profile__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile__featureKey {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.profile__featureValue {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .profile__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile__card--shap {
+  text-align: center;
+  padding: 30px;
+}
+
+.profile__subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.profile__shapContainer {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+}
+
+.profile__shapImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.profile__caption {
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #444;
+}
