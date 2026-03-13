@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+model.pkl
+feature_names.pkl
+patients.json
+.pytest_cache/
+venv/
+.env
